@@ -1,0 +1,24 @@
+{
+  "name": "movie-app-review",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "build": "parcel build ./index,html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phantasia0/movie_app_review.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Phantasia0/movie_app_review/issues"
+  },
+  "homepage": "https://github.com/Phantasia0/movie_app_review#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}

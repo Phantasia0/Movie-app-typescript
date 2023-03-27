@@ -16,7 +16,7 @@ function routeRender(routes) {
   if (!location.hash) {
     history.replaceState(null, "", "/#/");
   }
-  const routerView = document.createElement("router-view");
+  const routerView = document.querySelector("router-view");
   const [hash, queryString = ""] = location.hash.split("?");
 
   const query = queryString.split("&").reduce((acc, cur) => {

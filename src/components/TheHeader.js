@@ -21,13 +21,24 @@ export default class TheHeader extends Component {
         ],
       },
     });
+    window.addEventListener("popstate", () => {
+      this.render();
+    });
   }
   render() {
     this.el.innerHTML = /* html */ `
       <a href="#/" class="logo"><span>OMDbAPI</span>.COM</a>
       <nav>
         <ul>
-          ${this.state.menus.map((menu) => /* html */ `<li><a href="${menu.href}">${menu.name}</a></li>`).join("")}
+          ${this.state.menus
+            .map((menu) => {
+              const href = menu.href.split("?")[0];
+              const hash = location.hash.split("?")[0];
+              const isActive = href === hash;
+              return /* html */ `<li><a class="${isActive ? "active" : ""}"
+              href="${menu.href}">${menu.name}</a></li>`;
+            })
+            .join("")}
         </ul>
       </nav>
       <a href="#/about" class="user">

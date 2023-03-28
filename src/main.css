@@ -199,8 +199,8 @@ body {
   color: var(--color-primary);
   margin-bottom: 20px;
 }
-.the-movie .specs .plot {
-}
+/* .the-movie .specs .plot {
+} */
 .the-movie .specs h3 {
   font-size: 20px;
   font-family: "Oswald", sans-serif;

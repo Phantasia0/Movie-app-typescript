@@ -5,7 +5,7 @@ export default class About extends Component {
   render() {
     const { photo, name, email, github, algorithm } = aboutStore.state;
 
-    this.el.classList.add("about");
+    this.el.classList.add("container", "about");
     this.el.innerHTML = /* html */ `
       <div style="background-image:url(${photo})" class="photo"></div>
       <p class="name">${name}</p>

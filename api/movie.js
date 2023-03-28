@@ -1,11 +1,13 @@
 import fetch from "node-fetch";
 
+const { APIKEY } = process.env;
+
 export default async function handler(request, response) {
   const { title, page, id } = JSON.parse(request.body);
   //prettier-ignore
   const url = id 
-    ? `https://omdbapi.com?apikey=7035c60c&i=${id}&plot=full`
-    : `https://omdbapi.com?apikey=7035c60c&s=${title}&page=${page}`;
+    ? `https://omdbapi.com?apikey=${APIKEY}&i=${id}&plot=full`
+    : `https://omdbapi.com?apikey=${APIKEY}&s=${title}&page=${page}`;
 
   const res = await fetch(url);
   const json = await res.json();

@@ -1,6 +1,15 @@
 import { Store } from "../core/template";
 
-export default new Store({
+interface State {
+  photo: string;
+  name: string;
+  email: string;
+  blog: string;
+  github: string;
+  algorithm: string;
+}
+
+export default new Store<State>({
   photo: "https://velog.velcdn.com/images/ncprog1/post/07bf7706-3cdd-4235-bf9d-f9962d1614d0/image.png",
   name: "Phantasia0 / WonJun",
   email: "theemail@gmail.com",
